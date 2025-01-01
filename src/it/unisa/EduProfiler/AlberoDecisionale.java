@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * La classe AlberoDecisionale implementa un albero decisionale per prevedere l'indice accademico
- * degli studenti basandosi su diversi attributi come la media dei voti, le ore di studio e le attività extra.
+ * degli studenti basandosi su diversi attributi come la media dei voti, le ore di studio settimanali e le attività extra.
  * L'albero è costruito ricorsivamente suddividendo gli studenti in base agli attributi e alle categorie di indice accademico.
  *
  * @author Battaglia Daniel
@@ -32,7 +32,7 @@ public class AlberoDecisionale {
      * @return il nodo creato
      */
     private static Nodo costruisciNodo(List<Studente> studenti, String attributoCorrente) {
-        // Se il sottoinsieme è vuoto, ritorna null (nodo foglia)
+        // Se il sottoinsieme è vuoto, ritorna null
         if (studenti.isEmpty()) {
             return null;
         }

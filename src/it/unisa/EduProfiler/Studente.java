@@ -1,7 +1,7 @@
 package it.unisa.EduProfiler;
 
 /**
- * Classe che rappresenta uno studente, con le sue medie di voti, ore di studio e attività extra.
+ * Classe che rappresenta uno studente, con le sue medie di voti, ore di studio settimanali e attività extra.
  * La classe crea una categoria per lo studente basata su questi valori.
  *
  * @author Battaglia Daniel
@@ -10,7 +10,7 @@ package it.unisa.EduProfiler;
 public class Studente {
     private double mediaOreDiStudio;
     private double mediaVoti;
-    private double mediaAttivitaExtra;
+    private int mediaAttivitaExtra;
     private Categoria categoria;
 
     /**
@@ -18,10 +18,10 @@ public class Studente {
      *
      * @param mediaVoti la media dei voti dello studente
      * @param mediaOreDiStudio la media delle ore di studio dello studente
-     * @param mediaAttivitaExtra la media delle attività extra dello studente
-     * @param type il tipo di calcolo per l'indice accademico (1 per calcolare, 0 per non calcolare)
+     * @param mediaAttivitaExtra numero attività extra dello studente
+     * @param type indica se calcolare o meno l'indice accademico (1 per calcolare, altri numeri per non calcolare)
      */
-    public Studente(double mediaVoti, double mediaOreDiStudio, double mediaAttivitaExtra, int type) {
+    public Studente(double mediaVoti, double mediaOreDiStudio, int mediaAttivitaExtra, int type) {
         this.mediaVoti = mediaVoti;
         this.mediaOreDiStudio = mediaOreDiStudio;
         this.mediaAttivitaExtra = mediaAttivitaExtra;
@@ -69,7 +69,7 @@ public class Studente {
      *
      * @return la media delle attività extra dello studente
      */
-    public double getMediaAttivitaExtra() {
+    public int getMediaAttivitaExtra() {
         return mediaAttivitaExtra;
     }
 
@@ -78,7 +78,7 @@ public class Studente {
      *
      * @param mediaAttivitaExtra la nuova media delle attività extra
      */
-    public void setMediaAttivitaExtra(double mediaAttivitaExtra) {
+    public void setMediaAttivitaExtra(int mediaAttivitaExtra) {
         this.mediaAttivitaExtra = mediaAttivitaExtra;
     }
 

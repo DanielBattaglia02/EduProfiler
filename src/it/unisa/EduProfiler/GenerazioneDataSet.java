@@ -5,7 +5,7 @@ import java.util.List;
 
 /**
  * La classe GenerazioneDataSet fornisce un metodo per generare manualmente un dataset di studenti.
- * Ogni studente è rappresentato da una serie di attributi come la media dei voti, le ore di studio e le attività extra.
+ * Ogni studente è rappresentato da una serie di attributi come la media dei voti, le ore di studio settimanali e le attività extra.
  * Questi dati vengono usati per costruire un albero decisionale per la previsione dell'indice accademico.
  *
  * @author Battaglia Daniel
@@ -15,7 +15,7 @@ public class GenerazioneDataSet {
 
     /**
      * Metodo per generare manualmente una lista di 27 studenti con vari attributi.
-     * Ogni studente è creato con valori specifici per mediaVoti, mediaOreDiStudio, mediaAttività, e indiceAccademico.
+     * Ogni studente è creato con valori specifici per mediaVoti, mediaOreDiStudio e mediaAttività.
      *
      * @return una lista di 27 studenti con valori predefiniti
      */
@@ -36,11 +36,11 @@ public class GenerazioneDataSet {
         // Studente 6
         studenti.add(new Studente(19, 20, 6, 1));  //bassa-media-alta
         // Studente 7
-        studenti.add(new Studente(20, 9, 1, 1));  //bassa-alta-bassa
+        studenti.add(new Studente(20, 21, 1, 1));  //bassa-alta-bassa
         // Studente 8
-        studenti.add(new Studente(20, 6, 5, 1));  //bassa-alta-media
+        studenti.add(new Studente(20, 21, 5, 1));  //bassa-alta-media
         // Studente 9
-        studenti.add(new Studente(22, 8, 9, 1));  //bassa-alta-alta
+        studenti.add(new Studente(22, 21, 9, 1));  //bassa-alta-alta
 
         // Studente 10
         studenti.add(new Studente(25, 4, 3, 1));  //media-bassa-bassa
@@ -72,9 +72,9 @@ public class GenerazioneDataSet {
         // Studente 23
         studenti.add(new Studente(28, 20, 3, 1));  //alta-media-media
         // Studente 24
-        studenti.add(new Studente(29, 24, 7, 1));  //alta-media-alta
+        studenti.add(new Studente(29, 18, 7, 1));  //alta-media-alta
         // Studente 25
-        studenti.add(new Studente(30, 19, 5, 1));  //alta-alta-bassa
+        studenti.add(new Studente(30, 21, 5, 1));  //alta-alta-bassa
         // Studente 26
         studenti.add(new Studente(30, 25, 9, 1));  //alta-alta-media
         // Studente 27

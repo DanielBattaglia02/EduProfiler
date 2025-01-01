@@ -11,7 +11,7 @@ public class Categoria {
     private String mediaVoti;
     private String mediaOreDiStudio;
     private String mediaAttivitaExtra;
-    private String indiceAccademico = null;  // Nuovo attributo per l'indice accademico
+    private String indiceAccademico = null;
 
     /**
      * Costruttore che determina la categoria per ogni attributo e calcola l'indice accademico.
@@ -21,8 +21,8 @@ public class Categoria {
      * @param mediaAttivitaExtra la media delle attività extra dello studente
      * @param type il tipo di calcolo per l'indice accademico (1 per calcolare, 0 per non calcolare)
      */
-    public Categoria(double mediaVoti, double mediaOreDiStudio, double mediaAttivitaExtra, int type) {
-        // Categoria per mediaVoti
+    public Categoria(double mediaVoti, double mediaOreDiStudio, int mediaAttivitaExtra, int type)
+    {
         switch ((int) mediaVoti) {
             case 18, 19, 20, 21, 22:
                 this.mediaVoti = "Bassa";
@@ -37,7 +37,6 @@ public class Categoria {
                 this.mediaVoti = "Non valido";
         }
 
-        // Categoria per mediaOreDiStudio
         switch ((int) mediaOreDiStudio) {
             case 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10:
                 this.mediaOreDiStudio = "Bassa";
@@ -49,8 +48,7 @@ public class Categoria {
                 this.mediaOreDiStudio = "Alta";
         }
 
-        // Categoria per mediaAttivitaExtra
-        switch ((int) mediaAttivitaExtra) {
+        switch (mediaAttivitaExtra) {
             case 0, 1, 2:
                 this.mediaAttivitaExtra = "Bassa";
                 break;
@@ -61,8 +59,8 @@ public class Categoria {
                 this.mediaAttivitaExtra = "Alta";
         }
 
-        if (type == 1) {
-            // Calcolare l'indice accademico
+        if (type == 1)
+        {
             this.indiceAccademico = calcolaIndiceAccademico();
         }
     }
