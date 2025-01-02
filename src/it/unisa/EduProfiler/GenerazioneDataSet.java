@@ -30,7 +30,7 @@ public class GenerazioneDataSet {
         // Studente 3
         studenti.add(new Studente(18, 5, 7, 1));  //bassa-bassa-alta
         // Studente 4
-        studenti.add(new Studente(21, 15, 3, 1));  //bassa-media-bassa
+        studenti.add(new Studente(21, 15, 2, 1));  //bassa-media-bassa
         // Studente 5
         studenti.add(new Studente(21, 18, 4, 1));  //bassa-media-media
         // Studente 6
@@ -43,26 +43,26 @@ public class GenerazioneDataSet {
         studenti.add(new Studente(22, 21, 9, 1));  //bassa-alta-alta
 
         // Studente 10
-        studenti.add(new Studente(25, 4, 3, 1));  //media-bassa-bassa
+        studenti.add(new Studente(25, 4, 2, 1));  //media-bassa-bassa
         // Studente 11
-        studenti.add(new Studente(26, 15, 4, 1));  //media-bassa-media
+        studenti.add(new Studente(25, 5, 4, 1));  //media-bassa-media
         // Studente 12
-        studenti.add(new Studente(27, 17, 8, 1));  //media-bassa-alta
+        studenti.add(new Studente(25, 5, 8, 1));  //media-bassa-alta
         // Studente 13
-        studenti.add(new Studente(26, 19, 7, 1));  //media-media-bassa
+        studenti.add(new Studente(25, 19, 2, 1));  //media-media-bassa
         // Studente 14
         studenti.add(new Studente(25, 20, 5, 1));  //media-media-media
         // Studente 15
-        studenti.add(new Studente(24, 18, 6, 1));  //media-media-alta
+        studenti.add(new Studente(25, 18, 6, 1));  //media-media-alta
         // Studente 16
-        studenti.add(new Studente(27, 23, 2, 1));  //media-alta-bassa
+        studenti.add(new Studente(25, 23, 2, 1));  //media-alta-bassa
         // Studente 17
-        studenti.add(new Studente(29, 24, 8, 1));  //media-alta-media
+        studenti.add(new Studente(25, 24, 5, 1));  //media-alta-media
         // Studente 18
-        studenti.add(new Studente(28, 21, 9, 1));  //media-alta-alta
+        studenti.add(new Studente(25, 21, 9, 1));  //media-alta-alta
 
         // Studente 19
-        studenti.add(new Studente(30, 2, 5, 1));  //alta-bassa-bassa
+        studenti.add(new Studente(30, 2, 2, 1));  //alta-bassa-bassa
         // Studente 20
         studenti.add(new Studente(29, 3, 4, 1));  //alta-bassa-media
         // Studente 21
@@ -74,9 +74,9 @@ public class GenerazioneDataSet {
         // Studente 24
         studenti.add(new Studente(29, 18, 7, 1));  //alta-media-alta
         // Studente 25
-        studenti.add(new Studente(30, 21, 5, 1));  //alta-alta-bassa
+        studenti.add(new Studente(30, 21, 2, 1));  //alta-alta-bassa
         // Studente 26
-        studenti.add(new Studente(30, 25, 9, 1));  //alta-alta-media
+        studenti.add(new Studente(30, 25, 5, 1));  //alta-alta-media
         // Studente 27
         studenti.add(new Studente(30, 28, 12, 1));  //alta-alta-alta
 

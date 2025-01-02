@@ -93,6 +93,6 @@ public class EduProfiler {
         System.out.print("Inserisci la media attività extra: ");
         int mediaAttivitaExtra = scanner.nextInt();
 
-        return new Studente(mediaVoti, mediaOreDiStudio, mediaAttivitaExtra, 0); // Indice accademico impostato a 0 (verrà predetto)
+        return new Studente(mediaVoti, mediaOreDiStudio, mediaAttivitaExtra, 1); // Indice accademico impostato a 0 (verrà predetto)
     }
 }
