@@ -45,10 +45,10 @@ public class AlberoDecisionale {
         List<Studente> destra = new ArrayList<>();
         List<Studente> centrale = new ArrayList<>();
 
-        // Suddividere gli studenti nelle tre categorie: Basso, Alta, Media
+        // Suddividere gli studenti nelle tre categorie: Bassa, Alta, Media
         for (Studente studente : studenti) {
             String valoreAttributo = getValoreAttributo(studente, attributoCorrente);
-            if ("Basso".equals(valoreAttributo)) {
+            if ("Bassa".equals(valoreAttributo)) {
                 sinistra.add(studente);
             } else if ("Alta".equals(valoreAttributo)) {
                 destra.add(studente);
@@ -154,8 +154,9 @@ public class AlberoDecisionale {
             return nodo.getValorePredizione();  // Se il nodo è una foglia, ritorna la predizione
         }
 
+        //System.out.println(nodo);
         String valoreAttributo = getValoreAttributo(studente, nodo.getAttributo());
-        if ("Basso".equals(valoreAttributo)) {
+        if ("Bassa".equals(valoreAttributo)) {
             return prediciIndice(nodo.getSinistro(), studente);  // Vai al nodo sinistro
         } else if ("Alta".equals(valoreAttributo)) {
             return prediciIndice(nodo.getDestro(), studente);  // Vai al nodo destro

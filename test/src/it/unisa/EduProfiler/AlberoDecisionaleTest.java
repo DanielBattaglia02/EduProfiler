@@ -27,15 +27,7 @@ public class AlberoDecisionaleTest
     public void setUp()
     {
         studenti = new ArrayList<>();
-
-        // Aggiungi alcuni studenti con dati di esempio
-        Studente studente1 = new Studente(28, 20, 15, 1);
-        Studente studente2 = new Studente(22, 18, 10, 1);
-        Studente studente3 = new Studente(18, 12, 5, 1);
-
-        studenti.add(studente1);
-        studenti.add(studente2);
-        studenti.add(studente3);
+        studenti = GenerazioneDataSet.generaStudenti();
 
         // Costruisci l'albero decisionale con gli studenti
         albero = AlberoDecisionale.costruisciAlbero(studenti);
@@ -53,11 +45,11 @@ public class AlberoDecisionaleTest
     }
 
     /**
-     * Testa la predizione dell'indice accademico per uno studente con una media alta.
+     * Testa la predizione di un'indice accademico alto.
      * Verifica che l'indice accademico predetto sia "Alto".
      */
     @Test
-    public void testPredizioneIndiceAccademicoAlta()
+    public void testPredizioneIndiceAccademicoAlto()
     {
         // Verifica che un nuovo studente con una media alta venga predetto correttamente
         Studente nuovoStudente = new Studente(28, 20, 15, 0);
@@ -68,7 +60,7 @@ public class AlberoDecisionaleTest
     }
 
     /**
-     * Testa la predizione dell'indice accademico per uno studente con una media media.
+     * Testa la predizione di un'indicie accademico medio.
      * Verifica che l'indice accademico predetto sia "Medio".
      */
     @Test
@@ -82,7 +74,7 @@ public class AlberoDecisionaleTest
     }
 
     /**
-     * Testa la predizione dell'indice accademico per uno studente con una media bassa.
+     * Testa la predizione di un'indice accademico basso.
      * Verifica che l'indice accademico predetto sia "Basso".
      */
     @Test
@@ -91,7 +83,6 @@ public class AlberoDecisionaleTest
         Studente nuovoStudente = new Studente(18, 9, 5, 0);
 
         String predizione = AlberoDecisionale.prediciIndice(albero, nuovoStudente);
-        // L'indice accademico predetto dovrebbe essere "Medio" (basso non definito nell'esempio, quindi "Medio")
         assertEquals("Medio", predizione, "L'indice accademico predetto dovrebbe essere 'Basso'");
     }
 
@@ -104,5 +95,30 @@ public class AlberoDecisionaleTest
     {
         // Verifica che se l'albero è null, la predizione restituisce null
         assertNull(AlberoDecisionale.prediciIndice(null, null), "La predizione dovrebbe essere null se l'albero è null");
+    }
+
+    /**
+     * Test dell'intero dataset.
+     */
+    @Test
+    public void testDATASET()
+    {
+        for (Studente studente : studenti)
+        {
+            Studente nuovoStudente = new Studente(
+                    studente.getMediaVoti(),
+                    studente.getMediaOreDiStudio(),
+                    studente.getMediaAttivitaExtra(),
+                    0
+            );
+
+            String predizione = AlberoDecisionale.prediciIndice(albero, nuovoStudente);
+
+            // Confronta la predizione con il risultato atteso
+            assertEquals(studente.getCategoria().getIndiceAccademico(), predizione,
+                    "Predizione errata.\neffettivo: " + studente.getCategoria().getIndiceAccademico() +
+                            "\npredetto: " + predizione +
+                            "\nStudente: " + studente);
+        }
     }
 }

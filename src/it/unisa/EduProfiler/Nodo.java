@@ -146,4 +146,15 @@ public class Nodo {
     public void setFoglia(boolean isFoglia) {
         this.isFoglia = isFoglia;
     }
+
+    @Override
+    public String toString() {
+        return "Nodo{" +
+                "attributo='" + attributo + '\'' +
+                ", valorePredizione='" + valorePredizione + '\'' +
+                ", sinistro=" + sinistro +
+                ", centrale=" + centrale +
+                ", destro=" + destro +
+                '}';
+    }
 }
