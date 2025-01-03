@@ -1,4 +1,8 @@
-package it.unisa.EduProfiler;
+package it.unisa.EduProfiler.utils;
+
+import it.unisa.EduProfiler.core.Studente;
+import it.unisa.EduProfiler.ml.AlberoDecisionale;
+import it.unisa.EduProfiler.ml.Nodo;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

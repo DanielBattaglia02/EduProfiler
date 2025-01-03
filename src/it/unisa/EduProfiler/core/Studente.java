@@ -1,4 +1,4 @@
-package it.unisa.EduProfiler;
+package it.unisa.EduProfiler.core;
 
 /**
  * Classe che rappresenta uno studente, con le sue medie di voti, ore di studio settimanali e attività extra.

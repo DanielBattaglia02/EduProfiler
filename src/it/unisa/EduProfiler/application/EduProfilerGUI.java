@@ -1,4 +1,10 @@
-package it.unisa.EduProfiler;
+package it.unisa.EduProfiler.application;
+
+import it.unisa.EduProfiler.utils.EduProfilerActionListener;
+import it.unisa.EduProfiler.core.Studente;
+import it.unisa.EduProfiler.ml.AlberoDecisionale;
+import it.unisa.EduProfiler.ml.Nodo;
+import it.unisa.EduProfiler.utils.GenerazioneDataSet;
 
 import javax.swing.*;
 import java.awt.*;

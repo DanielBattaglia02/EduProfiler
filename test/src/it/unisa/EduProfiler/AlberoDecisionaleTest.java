@@ -1,5 +1,9 @@
 package it.unisa.EduProfiler;
 
+import it.unisa.EduProfiler.core.Studente;
+import it.unisa.EduProfiler.ml.AlberoDecisionale;
+import it.unisa.EduProfiler.ml.Nodo;
+import it.unisa.EduProfiler.utils.GenerazioneDataSet;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -64,7 +68,7 @@ public class AlberoDecisionaleTest
      * Verifica che l'indice accademico predetto sia "Medio".
      */
     @Test
-    public void testPredizioneIndiceAccademicoMedia() {
+    public void testPredizioneIndiceAccademicoMedio() {
         // Verifica che un nuovo studente con una media media venga predetto correttamente
         Studente nuovoStudente = new Studente(20, 18, 12, 0);
 

@@ -1,4 +1,6 @@
-package it.unisa.EduProfiler;
+package it.unisa.EduProfiler.utils;
+
+import it.unisa.EduProfiler.core.Studente;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +11,7 @@ import java.util.List;
  * Questi dati vengono usati per costruire un albero decisionale per la previsione dell'indice accademico.
  *
  * @author Battaglia Daniel
- * @author Pennarella Fabio
+c
  */
 public class GenerazioneDataSet {
 

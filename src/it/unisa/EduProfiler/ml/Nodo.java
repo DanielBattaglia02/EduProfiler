@@ -1,4 +1,4 @@
-package it.unisa.EduProfiler;
+package it.unisa.EduProfiler.ml;
 
 /**
  * La classe Nodo rappresenta un nodo di un albero decisionale.
