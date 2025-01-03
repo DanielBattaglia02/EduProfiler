@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"it.unisa.EduProfiler"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"it.unisa.EduProfiler"},{"l":"it.unisa.EduProfiler.application"},{"l":"it.unisa.EduProfiler.core"},{"l":"it.unisa.EduProfiler.ml"},{"l":"it.unisa.EduProfiler.utils"}];updateSearchResults();

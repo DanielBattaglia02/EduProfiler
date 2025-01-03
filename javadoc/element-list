@@ -1,1 +1,5 @@
 it.unisa.EduProfiler
+it.unisa.EduProfiler.application
+it.unisa.EduProfiler.core
+it.unisa.EduProfiler.ml
+it.unisa.EduProfiler.utils
