@@ -84,7 +84,7 @@ public class AlberoDecisionale {
         else if (attributiRestanti.contains("indiceAccademico_end"))
         {
             // Se siamo arrivati all'ultimo attributo (indiceAccademico), crea una foglia con l'indice accademico
-            return new Nodo(calcolaIndiceAccademico(studenti), true);  // Nodo foglia con il valore dell'indice accademico
+            return new Nodo(getIndiceAccademico(studenti), true);  // Nodo foglia con il valore dell'indice accademico
         }
         else
         {
@@ -173,13 +173,13 @@ public class AlberoDecisionale {
     }
 
     /**
-     * Metodo per calcolare l'indice accademico del sottoinsieme di studenti, restituendo il valore più comune.
+     * Metodo per apprenderel'indice accademico del sottoinsieme di studenti, restituendo il valore più comune.
      *
      * @param studenti la lista di studenti per calcolare l'indice accademico
      * @return l'indice accademico predetto (Basso, Medio, Alto)
      */
-    private static String calcolaIndiceAccademico(List<Studente> studenti) {
-        // Calcoliamo l'indice accademico come il più comune tra gli studenti nel sottoinsieme
+    private static String getIndiceAccademico(List<Studente> studenti) {
+        //Apprendiamo l'indice accademico
         String indiceAccademico = studenti.get(0).getCategoria().getIndiceAccademico();
         for (Studente studente : studenti) {
             String indice = studente.getCategoria().getIndiceAccademico();

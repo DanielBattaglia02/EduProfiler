@@ -13,7 +13,7 @@ package it.unisa.EduProfiler.ml;
 public class Nodo {
     private String attributo;  // Attributo da cui si fa la divisione (mediaVoti, mediaOreDiStudio, mediaAttività)
     private String valorePredizione;  // Se il nodo è una foglia, il valore dell'indice accademico
-    private Nodo sinistro;  // Nodo sinistro (Basso)
+    private Nodo sinistro;  // Nodo sinistro (Bassa)
     private Nodo centrale;  // Nodo centrale (Media)
     private Nodo destro;  // Nodo destro (Alta)
     private boolean isFoglia;  // Se il nodo è una foglia (cioè fa una previsione)
