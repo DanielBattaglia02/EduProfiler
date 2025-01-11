@@ -13,6 +13,7 @@ Il compito dell'algoritmo è predire l'indice accademico di uno studente che ha 
 L'algoritmo di predizione si basa su un albero decisionale. Questo approccio consente di classificare gli studenti in base ai loro dati e predire il loro indice accademico, rendendo il sistema dinamico e facilmente interpretabile.
 
 -- RISORSE --
+
 Il progetto è suddiviso in diversi pacchetti, ognuno con una funzione specifica:
 1.	Package "application": Contiene le classi principali che gestiscono l'esecuzione di EduProfiler senza interfaccia grafica.
 2.	Package "core": Contiene le classi fondamentali che rappresentano lo Studente e altre entità principali nel calcolo dell'indice accademico.
@@ -22,6 +23,7 @@ Il progetto è suddiviso in diversi pacchetti, ognuno con una funzione specifica
 6.	Directory "lib": Contiene le librerie JUnit necessarie per testare le classi del progetto. È necessario importarle tramite Project Structure in IntelliJ.
 
 -- ESECUZIONE --
+
 L'applicazione può essere eseguita in due modalità:
 1.	EduProfiler (versione senza interfaccia grafica): questa versione consente di interagire con il sistema tramite la console. L'utente può inserire i dati di uno studente e ottenere una predizione dell'indice accademico direttamente nel terminale.
 2.	EduProfilerGUI (versione con interfaccia grafica): Questa versione, che include una GUI, offre un'esperienza più interattiva e visuale. Gli utenti possono inserire i dati dello studente attraverso moduli grafici, e l'applicazione mostrerà la predizione dell'indice accademico direttamente nell'interfaccia utente.
