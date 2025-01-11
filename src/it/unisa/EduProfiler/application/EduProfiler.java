@@ -92,12 +92,36 @@ public class EduProfiler {
             }
         }
 
-        System.out.print("Inserisci la media ore di studio: ");
-        int mediaOreDiStudio = scanner.nextInt();
+        int mediaOreDiStudio;
+        while (true)
+        {
+            System.out.print("Inserisci la media ore di studio (compresa tra 1 e 100): ");
+            mediaOreDiStudio = scanner.nextInt();
 
-        System.out.print("Inserisci la media attività extra: ");
-        int mediaAttivitaExtra = scanner.nextInt();
+            if (mediaOreDiStudio >= 1 && mediaOreDiStudio <= 100) {
+                break; // Esci dal ciclo se il valore è valido
+            }
+            else
+            {
+                System.out.println("Errore: la media ore di studio deve essere compresa tra 1 e 100. Riprova.");
+            }
+        }
 
-        return new Studente(mediaVoti, mediaOreDiStudio, mediaAttivitaExtra, 1); // Indice accademico impostato a 0 (verrà predetto)
+        int mediaAttivitaExtra;
+        while (true)
+        {
+            System.out.print("Inserisci la media attività extra (compresa tra 1 e 100): ");
+            mediaAttivitaExtra = scanner.nextInt();
+
+            if (mediaAttivitaExtra >= 1 && mediaAttivitaExtra <= 100) {
+                break; // Esci dal ciclo se il valore è valido
+            }
+            else
+            {
+                System.out.println("Errore: la media attività extra deve essere compresa tra 1 e 100. Riprova.");
+            }
+        }
+
+        return new Studente(mediaVoti, mediaOreDiStudio, mediaAttivitaExtra, 1); // Indice accademico impostato a 1 (verrà predetto)
     }
 }

@@ -35,6 +35,7 @@ public class Nodo {
      * @param isFoglia indica se il nodo è una foglia (true se è una foglia, false altrimenti)
      */
     public Nodo(String valorePredizione, boolean isFoglia) {
+        this.attributo = "indiceAccademico";
         this.valorePredizione = valorePredizione;
         this.isFoglia = isFoglia;
     }

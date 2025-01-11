@@ -42,8 +42,8 @@ public class InformationGainTest {
 
         // Per una verifica più precisa, puoi aggiungere un controllo sui valori attesi di gain.
         // I valori dipenderanno dai dati specifici del dataset che stai utilizzando.
-        System.out.println("Guadagno di informazione per mediaVoti: " + gainMediaVoti);
-        System.out.println("Guadagno di informazione per mediaOreDiStudio: " + gainMediaOreDiStudio);
-        System.out.println("Guadagno di informazione per mediaAttivita: " + gainMediaAttivita);
+        System.out.println("Guadagno di informazione per mediaVoti: " + gainMediaVoti*10);
+        System.out.println("Guadagno di informazione per mediaOreDiStudio: " + gainMediaOreDiStudio*10);
+        System.out.println("Guadagno di informazione per mediaAttivita: " + gainMediaAttivita*10);
     }
 }

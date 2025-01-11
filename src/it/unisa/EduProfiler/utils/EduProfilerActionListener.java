@@ -57,9 +57,9 @@ public class EduProfilerActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         try {
             // Controlla che i campi siano validi
-            double mediaVotiValue = validateDoubleInput(mediaVoti.getText(), "Media voti");
-            double mediaOreValue = validateDoubleInput(mediaOreDiStudio.getText(), "Media ore di studio");
-            int attivitaValue = validateIntegerInput(attivitaExtra.getText(), "Attività extra-curriculari");
+            double mediaVotiValue = validateMediaVoti(mediaVoti.getText());
+            double mediaOreValue = validateRange(mediaOreDiStudio.getText(), "Media ore di studio", 1, 100);
+            int attivitaValue = (int) validateRange(attivitaExtra.getText(), "Attività extra-curriculari", 1, 100);
 
             // Crea un nuovo studente
             Studente nuovoStudente = new Studente(mediaVotiValue, mediaOreValue, attivitaValue, 0);
@@ -83,34 +83,43 @@ public class EduProfilerActionListener implements ActionListener {
     }
 
     /**
-     * Metodo per validare l'input come numero decimale.
+     * Metodo per validare che la media voti sia un numero decimale compreso tra 18 e 30.
      *
      * @param input il valore inserito dall'utente.
-     * @param fieldName il nome del campo da validare (utilizzato nei messaggi di errore).
      * @return il valore convertito in double se valido.
-     * @throws IllegalArgumentException se l'input non è un numero decimale valido.
+     * @throws IllegalArgumentException se l'input non è valido.
      */
-    private double validateDoubleInput(String input, String fieldName) {
+    private double validateMediaVoti(String input) {
         try {
-            return Double.parseDouble(input);
+            double value = Double.parseDouble(input);
+            if (value < 18 || value > 30) {
+                throw new IllegalArgumentException("La media voti deve essere compresa tra 18 e 30.");
+            }
+            return value;
         } catch (NumberFormatException ex) {
-            throw new IllegalArgumentException(fieldName + " deve essere un numero decimale valido.");
+            throw new IllegalArgumentException("Media voti deve essere un numero decimale valido.");
         }
     }
 
     /**
-     * Metodo per validare l'input come numero intero.
+     * Metodo per validare che un input sia un numero compreso in un intervallo specifico.
      *
      * @param input il valore inserito dall'utente.
      * @param fieldName il nome del campo da validare (utilizzato nei messaggi di errore).
-     * @return il valore convertito in int se valido.
-     * @throws IllegalArgumentException se l'input non è un numero intero valido.
+     * @param min il valore minimo accettabile.
+     * @param max il valore massimo accettabile.
+     * @return il valore convertito se valido.
+     * @throws IllegalArgumentException se l'input non è valido.
      */
-    private int validateIntegerInput(String input, String fieldName) {
+    private double validateRange(String input, String fieldName, int min, int max) {
         try {
-            return Integer.parseInt(input);
+            double value = Double.parseDouble(input);
+            if (value < min || value > max) {
+                throw new IllegalArgumentException(fieldName + " deve essere compreso tra " + min + " e " + max + ".");
+            }
+            return value;
         } catch (NumberFormatException ex) {
-            throw new IllegalArgumentException(fieldName + " deve essere un numero intero valido.");
+            throw new IllegalArgumentException(fieldName + " deve essere un numero valido.");
         }
     }
 }
