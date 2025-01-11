@@ -59,7 +59,7 @@ public class EduProfilerActionListener implements ActionListener {
             // Controlla che i campi siano validi
             double mediaVotiValue = validateMediaVoti(mediaVoti.getText());
             double mediaOreValue = validateRange(mediaOreDiStudio.getText(), "Media ore di studio", 1, 100);
-            int attivitaValue = (int) validateRange(attivitaExtra.getText(), "Attività extra-curriculari", 1, 100);
+            int attivitaValue = (int) validateRange(attivitaExtra.getText(), "Attività extra-curriculari", 0, 100);
 
             // Crea un nuovo studente
             Studente nuovoStudente = new Studente(mediaVotiValue, mediaOreValue, attivitaValue, 0);

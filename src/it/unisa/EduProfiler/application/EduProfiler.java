@@ -110,15 +110,15 @@ public class EduProfiler {
         int mediaAttivitaExtra;
         while (true)
         {
-            System.out.print("Inserisci la media attività extra (compresa tra 1 e 100): ");
+            System.out.print("Inserisci la media attività extra (compresa tra 0 e 100): ");
             mediaAttivitaExtra = scanner.nextInt();
 
-            if (mediaAttivitaExtra >= 1 && mediaAttivitaExtra <= 100) {
+            if (mediaAttivitaExtra >= 0 && mediaAttivitaExtra <= 100) {
                 break; // Esci dal ciclo se il valore è valido
             }
             else
             {
-                System.out.println("Errore: la media attività extra deve essere compresa tra 1 e 100. Riprova.");
+                System.out.println("Errore: la media attività extra deve essere compresa tra 0 e 100. Riprova.");
             }
         }
 
