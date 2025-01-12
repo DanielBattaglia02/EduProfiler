@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 
 /**
- * Questa classe di test ha il compito di testare "KFoldCrossValidation".
+ * Classe di test di "KFoldCrossValidation".
  *
  * @author Battaglia Daniel
  * @author Pennarella Fabio
