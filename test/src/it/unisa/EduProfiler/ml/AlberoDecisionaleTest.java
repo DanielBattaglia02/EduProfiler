@@ -1,4 +1,4 @@
-package it.unisa.EduProfiler;
+package it.unisa.EduProfiler.ml;
 
 import it.unisa.EduProfiler.core.Studente;
 import it.unisa.EduProfiler.ml.AlberoDecisionale;

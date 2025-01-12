@@ -146,7 +146,8 @@ public class AlberoDecisionale {
 
     /**
      * Metodo per predire l'indice accademico per uno studente dato l'albero decisionale.
-     * Questo metodo segue il percorso dell'albero in base ai valori degli attributi dello studente.
+     * Questo metodo segue il percorso dell'albero in base ai valori degli attributi dello studente,
+     * gestendo i casi in cui i nodi figli siano nulli.
      *
      * @param nodo il nodo corrente dell'albero
      * @param studente lo studente per cui fare la previsione
@@ -154,22 +155,49 @@ public class AlberoDecisionale {
      */
     public static String prediciIndice(Nodo nodo, Studente studente) {
         if (nodo == null) {
-            return null;  // Se il nodo è null, non c'è alcuna previsione
+            return null; // Se il nodo è null, non c'è alcuna previsione
         }
 
         if (nodo.isFoglia()) {
-            return nodo.getValorePredizione();  // Se il nodo è una foglia, ritorna la predizione
+            return nodo.getValorePredizione(); // Se il nodo è una foglia, ritorna la predizione
         }
+
+        //System.out.println(nodo.getAttributo() + nodo.getSinistro() + nodo.getCentrale() + nodo.getDestro());
 
         // Esamina il valore dell'attributo dello studente per decidere quale ramo seguire
         String valoreAttributo = getValoreAttributo(studente, nodo.getAttributo());
+
+        Nodo prossimoNodo = null;
+
+        // Determina il prossimo nodo in base al valore dell'attributo
         if ("Bassa".equals(valoreAttributo)) {
-            return prediciIndice(nodo.getSinistro(), studente);  // Vai al nodo sinistro
+            prossimoNodo = nodo.getSinistro();
+            if (prossimoNodo == null) {
+                prossimoNodo = nodo.getCentrale();
+                if (prossimoNodo == null) {
+                    prossimoNodo = nodo.getDestro();
+                }
+            }
         } else if ("Alta".equals(valoreAttributo)) {
-            return prediciIndice(nodo.getDestro(), studente);  // Vai al nodo destro
+            prossimoNodo = nodo.getDestro();
+            if (prossimoNodo == null) {
+                prossimoNodo = nodo.getCentrale();
+                if (prossimoNodo == null) {
+                    prossimoNodo = nodo.getSinistro();
+                }
+            }
         } else {
-            return prediciIndice(nodo.getCentrale(), studente);  // Vai al nodo centrale
+            prossimoNodo = nodo.getCentrale();
+            if (prossimoNodo == null) {
+                prossimoNodo = nodo.getSinistro();
+                if (prossimoNodo == null) {
+                    prossimoNodo = nodo.getDestro();
+                }
+            }
         }
+
+        // Continua la previsione con il prossimo nodo
+        return prediciIndice(prossimoNodo, studente);
     }
 
     /**

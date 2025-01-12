@@ -10,7 +10,11 @@ Per calcolare l'indice accademico, l'algoritmo si basa sulle seguenti caratteris
 L'algoritmo utilizza un dataset predefinito composto da 27 studenti, ognuno con le sue caratteristiche e un indice accademico associato (basso, medio, alto). Il dataset è stato bilanciato in modo che ci sia lo stesso numero di studenti per ciascuna delle tre classi dell'indice accademico, permettendo così all'algoritmo di allenarsi su dati equilibrati e veritieri.
 Il compito dell'algoritmo è predire l'indice accademico di uno studente che ha già inserito tutte le caratteristiche, ad eccezione dell'indice accademico stesso. Quest'ultimo verrà calcolato automaticamente dal sistema, che, grazie all'intelligenza artificiale, apprende dal dataset e fornisce la classificazione corretta.
 
-L'algoritmo di predizione si basa su un albero decisionale. Questo approccio consente di classificare gli studenti in base ai loro dati e predire il loro indice accademico, rendendo il sistema dinamico e facilmente interpretabile.
+'algoritmo di previsione è fondato su un albero decisionale, un approccio robusto che consente di classificare gli studenti in base ai loro dati, prevedendo con precisione il loro indice accademico. Questa metodologia offre una chiara interpretabilità, permettendo di comprendere il processo decisionale alla base delle predizioni.
+
+Per migliorare la generalizzazione del modello e garantire una valutazione accurata delle sue performance, viene impiegata la K-Fold Cross Validation, una tecnica di validazione che suddivide il dataset in più sottoinsiemi (folds), alternando l'uso di ciascun sottoinsieme come set di test, mentre gli altri vengono utilizzati per l'addestramento. Questa procedura consente di ottenere una stima più affidabile dell'accuratezza del modello.
+
+Inoltre, l'algoritmo beneficia dell'Information Gain, una metrica fondamentale per la costruzione dell'albero decisionale. L'Information Gain misura la capacità di un attributo di ridurre l'incertezza rispetto alla classe da prevedere, ottimizzando la scelta degli attributi su cui basare le suddivisioni nei nodi dell'albero. Tale approccio contribuisce ad un modello di classificazione più efficiente e preciso.
 
 -- RISORSE --
 
@@ -19,7 +23,7 @@ Il progetto è suddiviso in diversi pacchetti, ognuno con una funzione specifica
 2.	Package "core": Contiene le classi fondamentali che rappresentano lo Studente e altre entità principali nel calcolo dell'indice accademico.
 3.	Package "ml": Include le classi che implementano l'algoritmo di machine learning, in particolare l'albero decisionale per la predizione dell'indice accademico.
 4.	Package "utils": Contiene classi di supporto per la generazione del dataset e per la gestione degli eventi nell'interfaccia grafica (listener).
-5.	Modulo "test": Comprende le classi di test per verificare il corretto funzionamento delle principali funzionalità del programma.
+5.	Modulo "test": Comprende le classi di test per verificare il corretto funzionamento delle funzionalità di machine learning del programma.
 6.	Directory "lib": Contiene le librerie JUnit necessarie per testare le classi del progetto. È necessario importarle tramite Project Structure in IntelliJ.
 
 -- ESECUZIONE --

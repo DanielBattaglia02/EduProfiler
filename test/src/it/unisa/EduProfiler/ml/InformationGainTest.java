@@ -1,4 +1,4 @@
-package it.unisa.EduProfiler;
+package it.unisa.EduProfiler.ml;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
