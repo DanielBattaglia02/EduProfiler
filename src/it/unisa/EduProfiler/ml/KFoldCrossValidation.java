@@ -5,6 +5,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * La classe contiene il metodo per effetturare la validazione incrociata "KFoldCrossValidation" del nosto modello.
+ *
+ * @author Battaglia Daniel
+ * @author Pennarella Fabio
+ */
+
 public class KFoldCrossValidation
 {
     /**

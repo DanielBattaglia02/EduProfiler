@@ -8,6 +8,12 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.List;
 
+/**
+ * Questa classe di test ha il compito di testare "KFoldCrossValidation".
+ *
+ * @author Battaglia Daniel
+ * @author Pennarella Fabio
+ */
 public class KFoldCrossValidationTest {
 
     private List<Studente> studenti;
@@ -31,7 +37,7 @@ public class KFoldCrossValidationTest {
     @Test
     public void testEseguiKFold() throws Exception {
         // Numero di fold per il test
-        int k = 5;
+        int k = 10;
 
         // Eseguiamo la K-Fold Cross Validation
         double accuracy = KFoldCrossValidation.eseguiKFold(studenti, k);
